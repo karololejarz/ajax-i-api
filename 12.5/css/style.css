@@ -7,7 +7,7 @@ body {
 button {
   background-color: #55ACEE;
   border : 1px solid #FFF;
-  color: white;
+  color: #FFF;
   margin: 20px;
   width: 200px;
 }
@@ -18,14 +18,21 @@ button:hover {
   cursor: pointer;
 }
 
-button a {
-  color: white;
+.tweet {
+  background-color: #55ACEE;
+  border: 1px solid #FFF; 
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+  width: 200px;  
 }
 
-button:hover a {
+.tweet:hover {
+  background-color: #FFF;
   color: #55ACEE;
+  cursor: pointer;
 }
 
-button i {
+.tweet i {
   margin-right: 0.5rem;
 }
