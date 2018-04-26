@@ -6,14 +6,24 @@ body {
 
 button {
   background-color: #55ACEE;
-  border : 1px solid white;
+  border : 1px solid #FFF;
   color: white;
   margin: 20px;
   width: 200px;
 }
 
+button:hover {
+  background-color: #FFF;
+  color: #55ACEE;
+  cursor: pointer;
+}
+
 button a {
   color: white;
+}
+
+button:hover a {
+  color: #55ACEE;
 }
 
 button i {
