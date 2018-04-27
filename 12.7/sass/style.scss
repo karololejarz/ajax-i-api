@@ -1,0 +1,93 @@
+.board {
+  background: url(https://source.unsplash.com/sMQiL_2v4vs);
+  min-height: 100vh;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;    
+
+  h1 {
+    color: white;
+    font-size: 3rem;    
+  }
+
+  button {
+    background-color: lightblue;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .btn-delete {
+    background-color: crimson;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+
+  .column-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .column {      
+      background-color: white;
+      border-radius: 5%;
+      display: inline-block;
+      margin: 1rem;
+      min-height: 300px; 
+      min-width: 150px;
+      width: 25vw;
+
+      .btn-delete {
+        margin-right: 10px;
+      }
+
+      .btn-delete:after {
+        content: " Column";
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .add-card {
+        border-radius: 5%;
+        background-color: lightblue;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      .column-card-list {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;        
+        min-height: 150px;
+      
+        .card {
+          background-color: lawngreen;
+          border-radius: 5%;
+          list-style-type: none;
+          margin: 1rem;
+          
+          p {
+            padding: 1rem;
+          }
+
+          .btn-delete {
+            margin-right: 0;
+            margin-top: 1rem;
+          }
+
+          .btn-delete:after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
