@@ -11,11 +11,15 @@ function Column(id, name) {
     var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
     var columnCardList = $('<ul class="column-card-list"></ul>');
     var columnDelete = $('<button class="btn-delete">x</button>');
-    var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+    var columnEdit = $('<button class="btn-edit">Edytuj kolumnę</button>');
+    var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');    
     
     // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
     columnDelete.click(function() {
       self.deleteColumn();
+    });
+    columnEdit.click(function() {
+      self.editColumn();
     });
     
     columnAddCard.click(function(event) {
@@ -35,9 +39,10 @@ function Column(id, name) {
       });
     });
       
-      // KONSTRUOWANIE ELEMENTU KOLUMNY
+    // KONSTRUOWANIE ELEMENTU KOLUMNY
     column.append(columnTitle)
       .append(columnDelete)
+      .append(columnEdit)
       .append(columnAddCard)
       .append(columnCardList);
       return column;
@@ -55,6 +60,21 @@ Column.prototype = {
       success: function(response){
         self.element.remove();
       }
+    });
+  },
+  editColumn: function() {
+    var self = this;
+    var newColumnName = prompt('Enter a new name of the column', this.element.children("h2").text());
+    $.ajax({
+      url: baseUrl + '/column/' + self.id,
+      method: 'PUT',
+      data: {
+        id: self.id,
+        name: newColumnName,
+      },
+        success: function(response){
+          self.element.children('h2').text(newColumnName);
+        }
     });
   }
 };
