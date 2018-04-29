@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>Country search engine</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <h1>Country search engine</h1>
     <button id="search">Search a country</button>
+    <br>
     <input id="country-name" type="text" />
+    <br>
     <h2>List of countries</h2>
     <ul id="countries">
       <li>No data</li>
@@ -18,15 +20,24 @@
       <thead>
         <td>Country</td>
         <td>Capital</td>
+        <td>Area</td>
+        <td>Population</td>
+        <td>Languages</td>
+        <td>Currencies</td>
       </thead>
       <tbody>
         <tr id="country-row">
           <th id="country"></th>
           <td id="capital"></td>
+          <td id="area"></td>
+          <td id="population"></td>
+          <td id="languages"></td>
+          <td id="currencies"></td>
         </tr>
       </tbody>
     </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
