@@ -12,7 +12,10 @@ function Column(id, name) {
     var columnCardList = $('<ul class="column-card-list"></ul>');
     var columnDelete = $('<button class="btn-delete">x</button>');
     var columnEdit = $('<button class="btn-edit">Edytuj kolumnę</button>');
-    var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');    
+    var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
+
+    column.attr('id', self.id);
+    column.attr('name', self.name);    
     
     // PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
     columnDelete.click(function() {
